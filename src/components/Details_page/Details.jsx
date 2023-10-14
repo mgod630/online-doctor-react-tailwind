@@ -71,7 +71,7 @@ const Details = () => {
             </div>
             <Link
                 to="/"
-                className="p-2 mt-5 rounded-md text-center text-sm font-semibold bg-blue-500 text-white hover:bg-blue-700 duration-300"
+                className="py-3 mt-5 rounded-md text-center text-sm font-semibold bg-blue-500 text-white hover:bg-blue-700 duration-300"
             >
                 بازگشت
             </Link>
