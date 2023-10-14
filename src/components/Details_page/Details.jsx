@@ -5,6 +5,7 @@ import * as Icon from "react-feather";
 import DetailsFirstBox from "./DetailsFirstBox";
 import DetailsSecondBox from "./DetailsSecondBox";
 import DetailsThirdBox from "./DetailsThirdBox";
+import LesserThanIcon from "../LesserThanIcon";
 
 const Details = () => {
     const params = useParams();
@@ -15,6 +16,12 @@ const Details = () => {
     console.log(selectedDoctor);
     return (
         <div className="bg-blue-200 flex flex-col">
+            <div className="bg-white flex justify-end items-center rounded-md py-3 px-3 mb-3">
+                {/* <Link>
+                    <LesserThanIcon className="hover:font-bold" />
+                </Link> */}
+                <p className="text-sm font-semibold">پروفایل پزشک</p>
+            </div>
             <div className="flex items-center justify-end">
                 <div>
                     <p>
@@ -69,12 +76,17 @@ const Details = () => {
                 <DetailsThirdBox day="سه شنبه" hour="8 تا 17" />
                 <DetailsThirdBox day="چهارشنبه" hour="8 تا 13" />
             </div>
-            <Link
-                to="/"
-                className="py-3 mt-5 rounded-md text-center text-sm font-semibold bg-blue-500 text-white hover:bg-blue-700 duration-300"
-            >
-                بازگشت
-            </Link>
+            <div className="flex justify-between">
+                <button className="py-3 mt-5 rounded-md text-center text-sm font-semibold w-5/12 bg-slate-400 text-slate-200 hover:cursor-not-allowed">
+                    دریافت و ثبت نوبت
+                </button>
+                <Link
+                    to="/"
+                    className="py-3 mt-5 rounded-md text-center text-sm font-semibold w-5/12 bg-blue-500 duration-300 text-slate-200 hover:bg-blue-700"
+                >
+                    بازگشت
+                </Link>
+            </div>
         </div>
     );
 };
