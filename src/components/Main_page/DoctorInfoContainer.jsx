@@ -9,14 +9,13 @@ const DoctorInfoContainers = ({ doctor }) => {
             className="bg-white flex justify-between rounded-md items-center p-2 w-full mx-auto shadow-md my-3 cursor-pointer hover:bg-slate-200 duration-300"
         >
             <LesserThanIcon />
-            <div className="flex items-center">
+            <div className="flex items-center text-xs font-semibold">
                 <div>
-                    <p>{doctor.name.first + " " + doctor.name.last}</p>
-                    <p>{doctor.email}</p>
-                    <p
-                        style={{ direction: "rtl" }}
-                        className="text-slate-400 text-sm font-semibold"
-                    >
+                    <p className="">
+                        {doctor.name.first + " " + doctor.name.last}
+                    </p>
+                    <p className="my-1 text-slate-700">{doctor.email}</p>
+                    <p style={{ direction: "rtl" }} className="text-slate-400 font-normal">
                         {doctor.registered.age} سال سابقه
                     </p>
                 </div>
